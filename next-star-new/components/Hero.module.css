@@ -1,0 +1,38 @@
+
+.hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); 
+  position: relative;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--hero-gradient);
+  color: white;
+  overflow: hidden;
+   margin-bottom: 40px;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroText {
+  font-size: 1.25rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 95, 162, 0.25), transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}

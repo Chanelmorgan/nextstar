@@ -1,0 +1,29 @@
+:root {
+  --color-purple: #5b2aa8;
+  --color-deep-purple: #2a0f55;
+  --color-pink: #ff5fa2;
+  --color-hot-pink: #ff3f8e;
+  --color-gold: #f6c453;
+  --color-soft-gold: #ffd77a;
+  --hero-gradient:
+    radial-gradient(circle at center, rgba(255,95,162,0.35), transparent 60%),
+    linear-gradient(135deg, #2a0f55, #5b2aa8, #ff5fa2);
+} 
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,159 @@
+/* EVENTS PAGE STYLING */
+.eventsPage {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: var(--color-deep-purple);
+  font-size: 1.25rem;
+  padding: 20px 0;
+}
+
+/* Sections */
+.section,
+.sectionAlt {
+  max-width: 1100px;
+  margin: 0 auto 35px auto;
+  padding: 40px 25px;
+  border-radius: 12px;
+}
+
+.section {
+  background: #fff;
+}
+
+.sectionAlt {
+  background: #f0f0f0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--color-deep-purple);
+  text-align: center;
+}
+
+/* GRID FOR EVENT CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  justify-items: center;   /* centers cards in their cell */
+  justify-content: center; /* centers incomplete last row */
+}
+
+/* EVENT CARD */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 280px; /* prevents cards from stretching too much */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* CARD TEXT */
+.cardTitle {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cardDate {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-hot-pink);
+  margin-bottom: 8px;
+}
+
+.cardVenue {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* CTA BUTTONS */
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  background: var(--color-purple);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #ff7eb3;
+}
+
+/* LINKS */
+.link {
+  color: var(--color-purple);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .section,
+  .sectionAlt {
+    padding: 25px 15px;
+    border-radius: 10px;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .grid {
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 20px;
+    max-width: 240px;
+    border-radius: 12px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+
+  .cardDate {
+    font-size: 1rem;
+  }
+
+  .cardVenue {
+    font-size: 0.85rem;
+  }
+
+  .cta {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* single column for tiny screens */
+    gap: 12px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}

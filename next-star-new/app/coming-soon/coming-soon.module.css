@@ -1,0 +1,113 @@
+.messageSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imageSide {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSide img {
+  width: 100%;
+  max-width: 300px; /* reduced from 100% or larger size */
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.textSide {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.textSide h1, .textSide h2 {
+  font-size: 3rem; 
+  margin: 0;
+  color: var(--color-deep-purple);
+}
+
+.textSide p {
+  font-size: 1.4rem; 
+  line-height: 1.6;
+  color: var(--color-deep-purple);
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #2a0f55, #5b2aa8, #ff5fa2);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #3c0f65, #6a1aad, #ff69b4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .messageSection {
+    flex-direction: column;
+    gap: 35px;
+    padding: 50px 20px;
+  }
+  .imageSide, .textSide {
+    max-width: 100%;
+  }
+  .textSide {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+  .textSide h1, .textSide h2 {
+    font-size: 2.4rem; 
+  }
+  .textSide p {
+    font-size: 1.2rem;
+  }
+  .ctaButton {
+    font-size: 1.1rem;
+    padding: 16px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .messageSection {
+    padding: 40px 15px;
+    gap: 25px;
+  }
+  .textSide h1, .textSide h2 {
+    font-size: 2rem; 
+  }
+  .textSide p {
+    font-size: 1rem;
+  }
+  .ctaButton {
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+}

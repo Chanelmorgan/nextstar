@@ -1,0 +1,112 @@
+.merchPage {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: var(--color-deep-purple);
+  font-size: 1.25rem;
+}
+
+.gridSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 20px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 20px;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--color-deep-purple);
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff4a6a;
+  margin-bottom: 15px;
+}
+
+.button {
+  padding: 12px 24px;
+  background: #ff4a6a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #ff7eb3;
+}
+
+@media (max-width: 768px) {
+  .gridSection {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  .cardBody {
+    padding: 10px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

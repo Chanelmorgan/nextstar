@@ -1,0 +1,90 @@
+.entryPage {
+  font-family: Arial, sans-serif;
+  color: var(--color-deep-purple);
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0;       
+  max-width: none;    
+  font-size: 1.25rem;
+}
+
+.section,
+.sectionAlt {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.section {
+  background: #fff;
+}
+
+.sectionAlt {
+  background: #f0f0f0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--color-deep-purple);
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.list li {
+  margin-bottom: 8px;
+}
+
+.link {
+  color: var(--color-purple);
+  text-decoration: underline;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 35px;
+  background: var(--color-purple);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: #ff7eb3;
+}
+
+
+@media (max-width: 768px) {
+  .entryPage {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .section,
+  .sectionAlt {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .entryPage {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .cta {
+    padding: 10px 20px; 
+    font-size: 1rem;     
+  }
+}

@@ -1,0 +1,297 @@
+.home {
+  font-family: 'Arial', sans-serif;
+  color: var(--color-deep-purple);
+  line-height: 1.6;
+  background: #f9f9f9;
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.section, .sectionAlt {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sectionAlt {
+  background: #f0f0f0;
+}
+
+.spacedText {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;       
+}
+
+.heroExtras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--hero-gradient);
+  color: white;
+  padding: 40px 20px 30px 20px;
+  text-align: center;
+}
+
+.heroExtras h1,
+.heroExtras h2,
+.heroExtras p {
+  margin: 5px 0;
+}
+
+.heroExtras h1 {
+  margin-top: -px;
+}
+
+.heroLogo {
+  margin-bottom: 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  background: #ff4a6a;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #ff7eb3;
+  color: white;
+} 
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.features div {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.features h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ff4a6a;
+}
+
+.features p {
+  font-size: 1rem;
+  color: var(--color-deep-purple);
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.contactBox {
+  flex: 1 1 45%; 
+  margin: 0;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1); 
+  color: var(--color-deep-purple);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContentInner {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contactContentInner a {
+  font-size: 1.3rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.contactForm button {
+  padding: 15px;
+  background: var(--color-purple);
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactForm button:hover {
+  background: #ff7eb3;
+}
+
+.contactInfo {
+  line-height: 1.6;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.contactInfo a {
+  font-size: 1.3rem;
+  color: var(--color-deep-purple);
+  text-decoration: none;
+  color: var(--color-deep-purple);
+} 
+
+.contactInfo a:hover {
+  text-decoration: underline; 
+  color: var(--color-hot-pink);
+}
+
+.contactIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  justify-content: center;
+} 
+
+.contactIcons a {
+  font-size: 2.2rem;
+  color: var(--color-deep-purple);
+  transition: color 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.contactIcons a:hover {
+  color: var(--color-hot-pink);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .timeBox span {
+    font-size: 1.5rem;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    box-sizing: border-box;
+  }
+
+  .contactBox {
+    flex-basis: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contactContentInner {
+    font-size: 1.2rem;
+  }
+
+  .contactContentInner a {
+    font-size: 1.1rem;
+  }
+
+  .contactInfo a {
+    font-size: 1.1rem;
+  }
+
+  .contactIcons a {
+    font-size: 2rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+
+  .features div {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .contactIcons {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    font-size: 1.1rem;
+  }
+
+  .heroExtras h1 {
+    font-size: 1.7rem;
+  }
+
+  .heroExtras p {
+    font-size: 0.95rem;
+  }
+
+  .section, .sectionAlt {
+    padding: 40px 15px;
+  }
+
+  .contactInfo {
+    font-size: 1.15rem;
+  }
+
+  .contactIcons a {
+    font-size: 1.8rem;
+  }
+
+  .contactContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

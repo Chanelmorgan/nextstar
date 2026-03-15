@@ -1,0 +1,96 @@
+.wrapper {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-deep-purple);
+}
+
+.card p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background: var(--color-purple);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  background: #ff7eb3;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: #eee;
+  color: var(--color-deep-purple);
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #ddd;
+}
+
+.wrapper .card p a.emailLink,
+.wrapper .card p a.emailLink:link,
+.wrapper .card p a.emailLink:visited,
+.wrapper .card p a.emailLink:hover,
+.wrapper .card p a.emailLink:active {
+  display: inline-block !important;
+  color: var(--color-purple) !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  position: relative !important;
+}
+
+.wrapper .card p a.emailLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-purple);
+  transition: all 0.3s ease;
+}
+
+.wrapper .card p a.emailLink:hover::after {
+  background: #ff7eb3;
+}
+
+.wrapper .card p a.emailLink:hover {
+  color: #ff7eb3 !important;
+}

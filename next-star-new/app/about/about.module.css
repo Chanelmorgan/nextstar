@@ -1,0 +1,193 @@
+.aboutPage {
+  font-family: Arial, sans-serif;
+  color: var(--color-deep-purple);
+  line-height: 1.6;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.section,
+.sectionAlt {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.section {
+  background: #fff;
+}
+
+.sectionAlt {
+  background: #f0f0f0;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #ff4a6a;
+}
+
+.list {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.list li {
+  margin-bottom: 10px; 
+  line-height: 1.5;
+}
+
+.ageSection {
+  background: #f0f0f0;
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+  color: var(--color-deep-purple);
+}
+
+.ageSection h2 {
+  font-size: 2.2rem;
+  color: var(--color-deep-purple);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ageSection p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--color-deep-purple);
+}
+
+.ageList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  gap: 25px;
+  padding: 0;
+  justify-content: center; 
+}
+
+.ageList li {
+  background-color: #fff;
+  width: 220px; 
+  height: 140px; 
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.ageList li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.owner {
+  display: flex;
+  align-items: center; 
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.ownerImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ownerInfo {
+  max-width: 600px;
+}
+
+.listItem {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  .ageList {
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+}
+
+@media (max-width: 768px) {
+    
+  .ageSection {
+    padding: 30px 20px; 
+  }
+
+  .ageList {
+    padding: 0 20px; 
+  }
+
+  .list {
+    padding-left: 0; 
+  }
+  .section,
+  .sectionAlt {
+    padding: 20px 15px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .ageSection h2 {
+    font-size: 1.8rem;
+  }
+
+  .ageSection p {
+    font-size: 1rem;
+  }
+
+
+  .owner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .ownerImage {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .ownerInfo {
+    max-width: 100%;
+  }
+
+  .section .list {
+    padding-left: 20px;
+    padding-right: 20px; /* prevent touching screen edges */
+    box-sizing: border-box;
+  }
+
+  .sectionAlt .list {
+    padding-left: 20px;
+    padding-right: 20px; 
+    box-sizing: border-box;
+  }
+
+  .aboutPage {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .section,
+  .sectionAlt,
+  .ageSection {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
