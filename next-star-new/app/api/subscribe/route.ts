@@ -16,27 +16,14 @@ export async function POST(req: Request) {
       body = await req.json();
       console.log("Subscribe payload:", body);
     } catch {
-      return NextResponse.json(
-        { message: "Invalid request body" },
-        { status: 400 }
-      );
+      return NextResponse.json({ message: "Invalid request body" }, { status: 400 });
     }
 
-    const {
-      email,
-      firstName,
-      lastName,
-      address,
-      phone,
-      company,
-    } = body;
+    const { email, firstName, lastName, address, phone, company } = body;
 
     // Validate email
     if (!email || typeof email !== "string" || !email.includes("@")) {
-      return NextResponse.json(
-        { message: "Please enter a valid email address." },
-        { status: 400 }
-      );
+      return NextResponse.json({ message: "Please enter a valid email address." }, { status: 400 });
     }
 
     const mergeFields: Record<string, string> = {
@@ -48,12 +35,10 @@ export async function POST(req: Request) {
     };
 
     const audienceId = process.env.MAILCHIMP_AUDIENCE_ID!;
-    const subscriberHash = createHash("md5")
-      .update(email.toLowerCase())
-      .digest("hex");
+    const subscriberHash = createHash("md5").update(email.toLowerCase()).digest("hex");
 
     try {
-      // Try adding as new subscriber (double opt-in)
+      // Add as new subscriber (double opt-in)
       await mailchimp.lists.addListMember(audienceId, {
         email_address: email,
         status: "pending",
@@ -61,10 +46,7 @@ export async function POST(req: Request) {
       });
 
       return NextResponse.json(
-        {
-          message:
-            "Almost done! Please check your email to confirm your subscription.",
-        },
+        { message: "Almost done! Please check your email to confirm your subscription." },
         { status: 200 }
       );
     } catch (error: any) {
@@ -77,13 +59,11 @@ export async function POST(req: Request) {
           email_address: email,
           status: "pending",
           merge_fields: mergeFields,
+          status_if_new: "pending", // ✅ Added to satisfy TypeScript
         });
 
         return NextResponse.json(
-          {
-            message:
-              "You're already on our list. If you haven’t confirmed yet, please check your spam as well.",
-          },
+          { message: "You're already on our list. If you haven’t confirmed yet, please check your spam as well." },
           { status: 200 }
         );
       }
@@ -94,45 +74,27 @@ export async function POST(req: Request) {
           email_address: email,
           status: "pending",
           merge_fields: mergeFields,
+          status_if_new: "pending", // ✅ Added
         });
 
         return NextResponse.json(
-          {
-            message:
-              "Please check your email to confirm your re-subscription.",
-          },
+          { message: "Please check your email to confirm your re-subscription." },
           { status: 200 }
         );
       }
 
       // Cleaned / permanently invalid
-      if (
-        body?.detail &&
-        typeof body.detail === "string" &&
-        body.detail.toLowerCase().includes("cleaned")
-      ) {
+      if (body?.detail && typeof body.detail === "string" && body.detail.toLowerCase().includes("cleaned")) {
         return NextResponse.json(
-          {
-            message:
-              "This email address cannot be re-subscribed. Please use a different email.",
-          },
+          { message: "This email address cannot be re-subscribed. Please use a different email." },
           { status: 400 }
         );
       }
 
-      return NextResponse.json(
-        {
-          message:
-            "We couldn’t subscribe this email. Please try again later.",
-        },
-        { status: 500 }
-      );
+      return NextResponse.json({ message: "We couldn’t subscribe this email. Please try again later." }, { status: 500 });
     }
   } catch (err) {
     console.error("Unhandled server error:", err);
-    return NextResponse.json(
-      { message: "Server error. Please try again later." },
-      { status: 500 }
-    );
+    return NextResponse.json({ message: "Server error. Please try again later." }, { status: 500 });
   }
 }
