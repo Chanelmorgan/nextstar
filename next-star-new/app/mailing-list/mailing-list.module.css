@@ -18,7 +18,7 @@
     padding: 16px 0;
   }
 }
-:global(:root) {
+.rootVars {
   --color-deep-purple: #4b0082;
   --color-hot-pink: #ff69b4;
   --color-purple: #6a0dad;
