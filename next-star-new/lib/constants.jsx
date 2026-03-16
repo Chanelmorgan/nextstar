@@ -1,3 +1,4 @@
+import DanceBugPage from "@/app/dance-bug/page";
 import Link from "next/link";
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -217,6 +218,6 @@ export const VENUES = [
   ,
   {
     name: "Ipswich",
-    link: "https://buytickets.com/kent",
+    link: "https://buytickets.com/ipswich",
   }
 ];

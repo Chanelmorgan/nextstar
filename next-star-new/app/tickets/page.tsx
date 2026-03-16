@@ -26,7 +26,8 @@ export default function TicketsPage() {
     if (selectedVenue) {
       const venue = venues.find((v) => v.name === selectedVenue);
       if (venue) {
-        router.push(venue.link);
+          alert(`${venue.name} link is not available yet. Please contact Info@nextstardancecompetition.co.uk for more information. `);
+      // router.push(venue.link); <-- disabled until real links exist
       }
     }
   }
