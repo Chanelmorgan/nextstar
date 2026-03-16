@@ -5,10 +5,10 @@ export default function DanceBugPage() {
   return (
     <main className={styles.wrapper}>
       <div className={styles.card}>
-        <h1>Dance Bug Link Coming Soon</h1>
+        <h1>Venue Link Coming Soon</h1>
 
         <p>
-          The Dance Bug link is not available from the website yet.
+          The link to the not available from the website yet.
         </p>
 
         <a
@@ -24,7 +24,7 @@ export default function DanceBugPage() {
 </a>
         <div className={styles.buttons}>
           <Link href="/entry" className={styles.primaryButton}>
-            Back to Entry
+            Back to Tickets
           </Link>
 
           <Link href="/" className={styles.secondaryButton}>

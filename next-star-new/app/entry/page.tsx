@@ -49,7 +49,7 @@ export default function EntryPage() {
           </Link>{" "}
           before submitting your entry.
         </p>
-        <Link href="/dance-bug" className={styles.cta}>
+        <Link href="https://www.dancebug.com/rf/?ifid=100747&parent_url=%22+parent_url;%3C/script%3E" className={styles.cta}>
           Go to Dance Bug
         </Link>
       </section>
